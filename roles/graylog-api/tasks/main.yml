@@ -1,5 +1,6 @@
 ---
 # tasks file for roles/graylog-api
+- include: prerequisites.yml
 - name: "place syslog_input bash script"
   template:
     src: syslog_input.sh.j2
