@@ -24,7 +24,6 @@ graylog_data_dir:             "/var/lib/graylog-server"
 graylog_plugin_dir:           "/usr/share/graylog-server/plugin"
 graylog_root_email:           ""
 graylog_root_timezone:        "UTC"
-graylog_alert_check_interval: 60
 graylog_disable_sigar:        false
 
 # Web & REST API
@@ -121,7 +120,7 @@ graylog_transport_email_auth_username:     "you@example.com"
 graylog_transport_email_auth_password:     "secret"
 graylog_transport_email_subject_prefix:    "[graylog]"
 graylog_transport_email_from_email:        "graylog@example.com"
-graylog_transport_email_web_interface_url: "http://graylog.example.com"
+graylog_transport_email_web_interface_url: "https://graylog.example.com"
 
 # Web UI
 graylog_web_listen_uri: "http://0.0.0.0:9000/"

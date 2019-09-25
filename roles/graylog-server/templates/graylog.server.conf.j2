@@ -2,7 +2,6 @@
 ############################
 # GRAYLOG CONFIGURATION FILE
 ############################
-#
 
 # If you are running more than one instances of Graylog server you have to select one of these
 # instances as master. The master will perform some periodical tasks that non-masters won't perform.
@@ -263,7 +262,7 @@ elasticsearch_max_docs_per_index = {{ graylog_elasticsearch_max_docs_per_index }
 
 # Disable checking the version of Elasticsearch for being compatible with this Graylog release.
 # WARNING: Using Graylog with unsupported and untested versions of Elasticsearch may lead to data loss!
-elasticsearch_disable_version_check = {{ graylog_elasticsearch_disable_version_check }}
+#elasticsearch_disable_version_check = {{ graylog_elasticsearch_disable_version_check }}
 
 # Disable message retention on this node, i. e. disable Elasticsearch index rotation.
 no_retention = {{ graylog_no_retention }}
@@ -468,10 +467,6 @@ lb_recognition_period_seconds = {{ graylog_lb_recognition_period_seconds }}
 stream_processing_timeout = {{ graylog_stream_processing_timeout }}
 stream_processing_max_faults = {{ graylog_stream_processing_max_faults }}
 
-# Length of the interval in seconds in which the alert conditions for all streams should be checked
-# and alarms are being sent.
-alert_check_interval = {{ graylog_alert_check_interval }}
-
 # Since 0.21 the Graylog server supports pluggable output modules. This means a single message can be written to multiple
 # outputs. The next setting defines the timeout for a single output module, including the default output module where all
 # messages end up.
@@ -490,6 +485,7 @@ shutdown_timeout = {{ graylog_shutdown_timeout }}
 mongodb_uri = {{ graylog_mongodb_uri }}
 
 # Authenticate against the MongoDB server
+# '+'-signs in the username or password need to be replaced by '%2B'
 #mongodb_uri = mongodb://grayloguser:secret@localhost:27017/graylog
 
 # Use a replica set instead of a single host
@@ -603,3 +599,17 @@ dashboard_widget_default_cache_time = {{ graylog_dashboard_widget_default_cache_
 # Should be http_thread_pool_size * average_cluster_size if you have a high number of concurrent users.
 proxied_requests_thread_pool_size = {{ graylog_proxied_requests_thread_pool_size }}
 
+# The server is writing processing status information to the database on a regular basis. This setting controls how
+# often the data is written to the database.
+# Default: 1s (cannot be less than 1s)
+#processing_status_persist_interval = 1s
+
+# Configures the threshold for detecting outdated processing status records. Any records that haven't been updated
+# in the configured threshold will be ignored.
+# Default: 1m (one minute)
+#processing_status_update_threshold = 1m
+
+# Configures the journal write rate threshold for selecting processing status records. Any records that have a lower
+# one minute rate than the configured value might be ignored. (dependent on number of messages in the journal)
+# Default: 1
+#processing_status_journal_write_rate_threshold = 1
