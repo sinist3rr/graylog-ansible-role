@@ -9,7 +9,7 @@ graylog_elasticsearch_redhat_enterprise_repo: "https://artifacts.elastic.co/pack
 graylog_elasticsearch_redhat_repo: "https://artifacts.elastic.co/packages/oss-6.x/yum"
 graylog_elasticsearch_redhat_key: "https://artifacts.elastic.co/GPG-KEY-elasticsearch"
 graylog_es_name: "graylog"
-graylog_version: "3.0"
+graylog_version: "3.1"
 graylog_yum_rpm_url: "https://packages.graylog2.org/repo/packages/graylog-{{ graylog_version }}-repository_latest.rpm"
 
 # General
