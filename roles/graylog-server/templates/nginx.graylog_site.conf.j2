@@ -4,7 +4,8 @@ server
 {
     listen 80 default_server;
     listen [::]:80 default_server ipv6only=on;
-    server_name {{ ansible_default_ipv4.address }};
+#    server_name {{ ansible_default_ipv4.address }};
+    server_name {{ ansible_host }};
 
     location / {
       proxy_set_header Host $http_host;
