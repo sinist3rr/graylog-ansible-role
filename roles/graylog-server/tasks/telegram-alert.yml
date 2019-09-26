@@ -1,0 +1,8 @@
+---
+- name: Download telegram alert plugin
+  get_url:
+    url: https://github.com/irgendwr/TelegramAlert/releases/download/v2.2.0/telegram-alert-2.2.0.jar
+    dest: /usr/share/graylog-server/plugin/
+    mode: '0644'
+  notify: "restart graylog-server"
+

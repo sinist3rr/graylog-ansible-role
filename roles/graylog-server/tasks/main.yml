@@ -1,9 +1,18 @@
 ---
 # tasks file for roles/graylog-server
+- include: "selinux.yml"
+  when: graylog_selinux_disable
+
 - include: "prerequisites-setup.yml"
 
 - include: "graylog-setup.yml"
 
 - include: "nginx-setup.yml"
   when: graylog_install_nginx
+
+- include: "input-api.yml"
+  when: graylog_create_input_api
+
+- include: "telegram-alert.yml"
+  when: graylog_install_telegram_alert
 

@@ -11,6 +11,9 @@ graylog_elasticsearch_redhat_key: "https://artifacts.elastic.co/GPG-KEY-elastics
 graylog_es_name: "graylog"
 graylog_version: "3.1"
 graylog_yum_rpm_url: "https://packages.graylog2.org/repo/packages/graylog-{{ graylog_version }}-repository_latest.rpm"
+graylog_selinux_disable: true
+graylog_create_input_api: false
+graylog_install_telegram_alert: true
 
 # General
 graylog_is_master:            true
