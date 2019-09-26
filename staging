@@ -1,4 +1,3 @@
-graylogg.example.com ansible_host=192.168.56.100
 srv ansible_host=192.168.56.100
 
 [nodes]
