@@ -1,4 +1,9 @@
 ---
+- name: install the epel repo
+  yum:
+    name: "epel-release"
+    state: "present"
+
 - name: install nginx
   yum:
     name: nginx
