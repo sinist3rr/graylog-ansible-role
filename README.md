@@ -1,7 +1,7 @@
-Role Name
+graylog-ansible-role
 =========
 
-A brief description of the role goes here.
+Only CentOS 7 are tested and supported.
 
 Requirements
 ------------
@@ -30,9 +30,5 @@ Including an example of how to use your role (for instance, with variables passe
 License
 -------
 
-BSD
+MIT
 
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
