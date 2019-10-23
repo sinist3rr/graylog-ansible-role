@@ -129,4 +129,3 @@ graylog_transport_email_web_interface_url: "https://graylog.example.com"
 graylog_web_listen_uri: "http://0.0.0.0:9000/"
 graylog_nginx_listen_uri: "http://0.0.0.0/"
 graylog_install_nginx: True
-

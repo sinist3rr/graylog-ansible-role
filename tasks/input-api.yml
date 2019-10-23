@@ -37,4 +37,3 @@
   until: result.json.global
   retries: 5
   delay: 10
-

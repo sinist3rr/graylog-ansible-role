@@ -5,4 +5,3 @@
     dest: /usr/share/graylog-server/plugin/
     mode: '0644'
   notify: "restart graylog-server"
-

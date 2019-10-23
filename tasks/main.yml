@@ -15,4 +15,3 @@
 
 - include: "telegram-alert.yml"
   when: graylog_install_telegram_alert
-
