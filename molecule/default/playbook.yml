@@ -1,0 +1,11 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+          graylog_selinux_disable: false
+          graylog_install_telegram_alert: false
+          graylog_root_timezone: "Europe/Kiev"
+          graylog_elasticsearch_shards: 1
+
+  roles:
+    - role: graylog-ansible-role
