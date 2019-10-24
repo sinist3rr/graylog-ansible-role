@@ -1,5 +1,6 @@
 graylog-ansible-role
 =========
+[![Build Status](https://travis-ci.org/sinist3rr/graylog-ansible-role.svg?branch=master)](https://travis-ci.org/sinist3rr/graylog-ansible-role)   
 
 Installs Graylog on RedHat/CentOS servers.
 
