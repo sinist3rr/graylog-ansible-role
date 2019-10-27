@@ -1,3 +1,5 @@
 .vagrant
 ansible.cfg
 *.retry
+*.pyc
+*/__pycache__
