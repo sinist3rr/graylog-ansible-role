@@ -13,6 +13,7 @@ Role Variables
 --------------
 
 All variables can be viewed in the file `defaults/main.yml`.  
+Nginx will be installed by default (`graylog_install_nginx`). 
 The notification telegram plugin is enabled and will be installed by default (`graylog_install_telegram_alert`).    
 Creating input via API is disabled by default (`graylog_create_input_api`).   
 
