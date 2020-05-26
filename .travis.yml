@@ -4,7 +4,7 @@ services: docker
 
 install:
   # Install test dependencies.
-  - pip install molecule yamllint ansible-lint testinfra docker
+  - pip install molecule yamllint ansible-lint testinfra flake8 docker
 
 script:
   # Run tests.
